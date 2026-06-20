@@ -1,0 +1,16 @@
+{
+  "name": "canvas_img",
+  "version": "0.0.1",
+  "main": "canvas_img.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "canvas",
+    "drawImageCORS",
+    "canvas-img"
+  ],
+  "author": "molang",
+  "license": "MIT",
+  "description": ""
+}
