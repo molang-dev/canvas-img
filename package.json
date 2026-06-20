@@ -1,6 +1,6 @@
 {
   "name": "canvas-img",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cross-origin image drawing library for Canvas",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
