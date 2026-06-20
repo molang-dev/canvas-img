@@ -8,7 +8,8 @@
   "unpkg": "dist/index.js",
   "jsdelivr": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "canvas",
@@ -17,5 +18,8 @@
     "cross-origin"
   ],
   "author": "molang",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
 }
