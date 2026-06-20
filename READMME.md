@@ -1,11 +1,7 @@
 # canvas-img
 Canvas draw image cross origin resource
 
-## TODO
-1. clear img
-2. use Image
-
-s## Demo
+## Demo
 ```html
 <!DOCTYPE html>
 <html>

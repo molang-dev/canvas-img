@@ -11,40 +11,14 @@
  */
 
 (function () {
-  function injectHiddenStyle() {
-    // random id
-    if (document.getElementById("style-3bXfmO7c")) return;
-
-    const style = document.createElement("style");
-    style.id = "style-3bXfmO7c";
-    style.textContent = `
-    ._3bXfmO7c {
-      width: 0px;
-      height: 0px;
-      display: none;
-      position: absolute;
-      pointer-events: none;
-      opacity: 0;
-      visibility: hidden;
-    }
-  `;
-    document.head.appendChild(style);
-  }
-
-  injectHiddenStyle();
-
-  function createHiddenImg(src) {
-    const img = document.createElement("img");
-    img.className = "_3bXfmO7c";
-    document.body.appendChild(img);
-    return img;
-  }
-
   function loadImage(src) {
     return new Promise((resolve, reject) => {
-      const img = createHiddenImg(src);
+      // const img = createHiddenImg(src);
+      const img = new Image()
 
       const onLoad = function () {
+        // console.log('loaded')
+
         img.removeEventListener("load", onLoad);
         img.removeEventListener("error", onError);
         resolve(img);
@@ -60,13 +34,13 @@
         reject("Load image error " + src);
       };
 
-      img.addEventListener("load", onLoad);
-      img.addEventListener("error", onError);
+
 
       img.src = src;
 
       // If the image is already cached (browser cache), complete may be true
       if (img.complete) {
+        // console.log('cached')
         // But onload may or may not have been triggered, handle it manually
         if (img.naturalWidth > 0) {
           // Manually trigger the load event
@@ -78,6 +52,9 @@
           img.dispatchEvent(errorEvent);
         }
         resolve(img);
+      }else{
+        img.addEventListener("load", onLoad);
+        img.addEventListener("error", onError);
       }
     });
   }
