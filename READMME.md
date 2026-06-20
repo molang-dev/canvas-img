@@ -5,7 +5,7 @@ Canvas draw image cross origin resource
 1. clear img
 2. use Image
 
-## Demo
+s## Demo
 ```html
 <!DOCTYPE html>
 <html>
