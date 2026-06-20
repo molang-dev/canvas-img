@@ -1,16 +1,21 @@
 {
   "name": "canvas-img",
-  "version": "0.0.2",
-  "main": "canvas-img.js",
+  "version": "0.1.0",
+  "description": "Cross-origin image drawing library for Canvas",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.js",
+  "jsdelivr": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "canvas",
     "drawImageCORS",
-    "canvas-img"
+    "canvas-img",
+    "cross-origin"
   ],
   "author": "molang",
-  "license": "MIT",
-  "description": ""
+  "license": "MIT"
 }
