@@ -7,20 +7,18 @@
 <body>
     <canvas id="myCanvas" width="800" height="600"></canvas>
     
-    <script src="canvas-img.js"></script>
-    
-    <script>
+    <script type="module" >
+        import drawImageCORS, { mountDrawImageCORS } from '../dist/index.js';
+        mountDrawImageCORS()
+
         const canvas = document.getElementById('myCanvas');
         const ctx = canvas.getContext('2d');
         
         // drawImageCORS (src, x, y)
         ctx.drawImageCORS('https://picsum.photos/400/300', 50, 50)
-            .then(() => console.log('done'))
-            .catch(err => console.error('error:', err));
         
         // drawImageCORS (src, x, y, width, height)
         ctx.drawImageCORS('https://picsum.photos/400/200', 500, 50, 200, 150)
-            .then(() => console.log('done'));
         
         // drawImageCORS (src, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
         ctx.drawImageCORS(
