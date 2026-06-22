@@ -1,7 +1,11 @@
 {
   "name": "canvas-img",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Cross-origin image drawing library for Canvas",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/molang-dev/canvas-img.git"
+  },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
