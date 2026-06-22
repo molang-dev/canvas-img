@@ -1,6 +1,6 @@
 {
   "name": "canvas-img",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Cross-origin image drawing library for Canvas",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -24,6 +24,9 @@
     "cross-origin"
   ],
   "author": "molang",
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "devDependencies": {
     "tsup": "^8.5.1",
