@@ -60,8 +60,12 @@ function loadImage(src: string, result: (img: HTMLImageElement | null) => void) 
     result(img)
     const list = handlers.get(src)
     if (!list) return
-    // list.forEach((cb) => cb(img));
-    console.log('result for done')
+    for(const cb of list){
+      if(cb !== result){
+        cb(img)
+      }
+    }
+    // clear callbacks
     list.splice(0)
     handlers.delete(src)
   }

@@ -6,39 +6,38 @@
 </head>
 <body>
     <canvas id="myCanvas" width="800" height="600"></canvas>
-    
-    <script type="module" >
-        import drawImageCORS, { mountDrawImageCORS } from '../dist/index.js';
-        mountDrawImageCORS()
 
-        const canvas = document.getElementById('myCanvas');
-        const ctx = canvas.getContext('2d');
-        
+    <script type="module">
+        import '../../dist/index.mjs'
+
+        const canvas = document.getElementById('myCanvas')
+        const ctx = canvas.getContext('2d')
+
         // drawImageCORS (src, x, y)
         ctx.drawImageCORS('https://picsum.photos/400/300', 50, 50)
-        
+
         // drawImageCORS (src, x, y, width, height)
         ctx.drawImageCORS('https://picsum.photos/400/200', 500, 50, 200, 150)
-        
+
         // drawImageCORS (src, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
         ctx.drawImageCORS(
             'https://picsum.photos/400/400',
-            50, 50, 200, 150,  // clip
+            50, 50, 200, 150,
             50, 300, 200, 150
-        );
-        
+        )
+
         async function loadMultiple() {
             try {
-                await ctx.drawImageCORS('https://picsum.photos/200/200', 0, 0);
-                await ctx.drawImageCORS('https://picsum.photos/200/200', 200, 0);
-                await ctx.drawImageCORS('https://picsum.photos/200/200', 400, 0);
-                console.log('all done');
+                await ctx.drawImageCORS('https://picsum.photos/200/200', 0, 0)
+                await ctx.drawImageCORS('https://picsum.photos/200/200', 200, 0)
+                await ctx.drawImageCORS('https://picsum.photos/200/200', 400, 0)
+                console.log('all done')
             } catch (error) {
-                console.error('load error:', error);
+                console.error('load error:', error)
             }
         }
-        
-        loadMultiple();
+
+        loadMultiple()
     </script>
 </body>
 </html>
